@@ -1,3 +1,8 @@
+h1{
+    font-size : 25px;
+    color : green;
+    text-align : center;
+}
 td button{width:100%}
 table {
     border-collapse: collapse;
@@ -9,5 +14,5 @@ table {
 table.center {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
