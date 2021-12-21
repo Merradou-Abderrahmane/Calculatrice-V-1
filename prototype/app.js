@@ -77,7 +77,7 @@ function Equal(){
     Afficher(solution);
 }
 
-function Init(){
+function Initialize(){
     A = undefined;
     B = undefined;
     AString = undefined;
