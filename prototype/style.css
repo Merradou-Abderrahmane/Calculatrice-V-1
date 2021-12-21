@@ -1,7 +1,7 @@
 h1{
     font-size : 25px;
     color : green;
-    text-align : center;
+    /* text-align : center; */
 }
 td button{width:100%}
 table {
