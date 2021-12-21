@@ -1,6 +1,10 @@
 // declaring variabels
-let A,B,solution,operation;
-let AString, BString;
+let A;
+let B;
+let solution;
+let operation;
+let AString;
+let BString;
 
 
 
