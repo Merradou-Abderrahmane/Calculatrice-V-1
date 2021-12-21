@@ -1,38 +1,35 @@
-// Declaring variabels
-let a;
-let b;
-let solution;
-let operation;
-let aString;
-let bString;
+// declaring variabels
+let A,B,solution,operation;
+let AString, BString;
 
 
-// Métier
-function calculation(a,b,operation){
-    let _solution = undefined;
+
+// Job
+function Calculate(A,B,operation){
+    let solution = undefined;
     switch (operation) {
-        case '+': 
-            _solution = a + b;
+        case '+':
+            solution = A + B;
             break;
         case '-':
-            _solution = a-b;
+            solution = A-B;
                 break;
         default:
             break;
     }
-    return _solution;
+    return solution;
 }
 
 
-// Présentation
+// Presentation
 function ClickNumber(number){
-    if(a == undefined){
-        if(aString == undefined) aString = '';
-        aString += number;
+    if(A == undefined){
+        if(AString == undefined) AString = '';
+        AString += number;
     } 
     else {
-        if(bString == undefined) bString = '';
-        bString += number;
+        if(BString == undefined) BString = '';
+        BString += number;
     } 
 
     Afficher();
@@ -40,19 +37,19 @@ function ClickNumber(number){
 
 function Afficher(number){
 
-    let afficheur = document.getElementById("afficheur");
-    afficheur.value = "";
+    let display = document.getElementById("display");
+    display.value = "";
     
-    if(a != undefined && b != undefined && operation != undefined){
+    if(A != undefined && B != undefined && operation != undefined){
 
-        afficheur.value = number;
+        display.value = number;
     }else{
-        if(aString != undefined)
-        afficheur.value += aString 
+        if(AString != undefined)
+        display.value += AString 
         if(operation != undefined)
-            afficheur.value += operation     
-        if(bString != undefined)
-            afficheur.value += bString 
+        display.value += operation     
+        if(BString != undefined)
+        display.value += BString 
 
         }
  
@@ -63,27 +60,27 @@ function Afficher(number){
 function Operation(operationParam){
     if(operation == undefined){
         operation = operationParam;
-        a = parseFloat(aString);
+        A = parseFloat(AString);
         Afficher();
     }else{
-        alert("Vous avez déjà choisi l'opération " + operation);
+        alert(" You have already chosen the operation  " + operation);
     }
 }
 
-function Egale(){
-    a = parseFloat(aString);
-    b = parseFloat(bString);
-    solution = calculation(a,b,operation);
+function Equal(){
+    A = parseFloat(AString);
+    B = parseFloat(BString);
+    solution = Calculate(A,B,operation);
     Afficher(solution);
 }
 
 function Init(){
-    a = undefined;
-    b = undefined;
-    aString = undefined;
-    bString = undefined;
+    A = undefined;
+    B = undefined;
+    AString = undefined;
+    BString = undefined;
     operation = undefined;
-    let afficheur = document.getElementById("afficheur");
+    let display = document.getElementById("display");
     
-    afficheur.value = "";
+    display.value = "";
 }
