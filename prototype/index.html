@@ -9,21 +9,14 @@
 </head>
 <body>
     <h1> Prototype Calculator V-1 </h1>
-    <table class="center" > 
-        <tr> 
-           <td colspan="4"><input id="output"/></td> 
-        </tr> 
-        <tr> 
-           <td><button onclick="afficher('1')">1</button></td> 
-           <td><button onclick="afficher('2')">2</button></td> 
-           <td><button onclick="afficher('3')">3</button></td> 
-           <td><button onclick="afficher('+')">+</button></td> 
-        </tr> 
-
-        <tr>
-           <td colspan="4"><button onclick="calculer()">=</button></td> 
-        </tr> 
-     </table> 
+    <input type="text" id="afficheur">
+    <button onclick="ClickNumber(1)">1</button>
+    <button onclick="ClickNumber(2)">2</button>
+    <button onclick="ClickNumber(3)">3</button>
+    <button onclick="Operation('+')">+</button>
+    <button onclick="Operation('-')">-</button>
+    <button onclick="Egale()">=</button>
+    <button onclick="Init()">C</button>
     <script src="app.js"></script>
 </body>
 </html>
