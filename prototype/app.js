@@ -1,4 +1,4 @@
-// declaring variabels
+// Declaring variabels
 let A;
 let B;
 let solution;
