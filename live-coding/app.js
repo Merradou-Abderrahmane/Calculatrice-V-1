@@ -20,14 +20,7 @@ function onClickNumber(number) {
         }
         bString += number
     }
-
-
-    // if (aString == undefined) {
-    //     aString = number
-    // } else {
-    //     bString = number
-    // }
-
+    
     display()
 }
 
