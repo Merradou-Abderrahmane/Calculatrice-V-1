@@ -31,16 +31,16 @@ function onClickNumber(number) {
     display()
 }
 
-function display(number) {
+function display() {
     var display = document.getElementById("display")
     display.value = ''
 
     if (a != undefined && b != undefined && operation != undefined) {
-        display.value = number
+        display.value = total
     } else {
         if (aString != undefined) {
             display.value += aString
-        }
+        } 
         if (operation != undefined) {
             display.value += operation
         }
@@ -55,15 +55,15 @@ function display(number) {
 function onClickOperation(operationParm) {
     if (operation == undefined) {
         operation = operationParm
-        a = parseFloat(aString)
+        a = parseInt(aString)
     }
 
     display()
 }
 
 function equal() {
-    a = parseFloat(aString);
-    b = parseFloat(bString);
+    a = parseInt(aString);
+    b = parseInt(bString);
 
     total = calculate(a, b, operation)
 
@@ -89,12 +89,6 @@ function calculate(aPara, bPara, operationPara) {
 }
 
 function initialize() {
-    firstNumber = undefined;
-    secondNumber = undefined;
-    firstNumberStr = undefined;
-    secondNumberStr = undefined;
-    operation = undefined;
     let display = document.getElementById("display");
-    
     display.value = "";
 }

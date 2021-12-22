@@ -1,89 +1,94 @@
-// Declaring variabels
-let A;
-let B;
-let solution;
-let operation;
-let AString;
-let BString;
+var aString;
+var bString;
+var operation;
+var a;
+var b;
+var total;
+
+function onClickNumber(number) {
+
+    if(a == undefined){
+        if (aString == undefined) {
+            aString = ""    
+        }
+        aString += number
+
+    }
+    else {
+        if(bString == undefined){
+            bString = ""
+        }
+        bString += number
+    }
 
 
-// Job
-function Calculate(A,B,operation){
-    let solution = undefined;
-    switch (operation) {
-        case '+':
-            solution = A + B;
+    // if (aString == undefined) {
+    //     aString = number
+    // } else {
+    //     bString = number
+    // }
+
+    display()
+}
+
+function display() {
+    var display = document.getElementById("display")
+    display.value = ''
+
+    if (a != undefined && b != undefined && operation != undefined) {
+        display.value = total
+    } else {
+        if (aString != undefined) {
+            display.value += aString
+        } 
+        if (operation != undefined) {
+            display.value += operation
+        }
+        if (bString != undefined) {
+            display.value += bString
+        }
+    }
+
+}
+
+
+function onClickOperation(operationParm) {
+    if (operation == undefined) {
+        operation = operationParm
+        a = parseInt(aString)
+    }
+
+    display()
+}
+
+function equal() {
+    a = parseInt(aString);
+    b = parseInt(bString);
+
+    total = calculate(a, b, operation)
+
+    display(total)
+
+}
+
+function calculate(aPara, bPara, operationPara) {
+    var _total = undefined
+
+    switch (operationPara) {
+        case "+":
+            _total = aPara + bPara
             break;
-        case '-':
-            solution = A-B;
-                break;
+        case "-":
+            _total = aPara - bPara
+            break;
         default:
             break;
     }
-    return solution;
+
+    return _total
 }
 
-
-// Presentation
-function pressNumber(number){
-    if(A == undefined){
-        if(AString == undefined) AString = '';
-        AString += number;
-    } 
-    else {
-        if(BString == undefined) BString = '';
-        BString += number;
-    } 
-
-    Afficher();
-}
-
-function Afficher(number){
-
+function initialize() {
     let display = document.getElementById("display");
-    display.value = "";
-    
-    if(A != undefined && B != undefined && operation != undefined){
-
-        display.value = number;
-    }else{
-        if(AString != undefined)
-        display.value += AString 
-        if(operation != undefined)
-        display.value += operation     
-        if(BString != undefined)
-        display.value += BString 
-
-        }
- 
-   
-}
-
-
-function Operation(operationParam){
-    if(operation == undefined){
-        operation = operationParam;
-        A = parseFloat(AString);
-        Afficher();
-    }else{
-        alert(" You have already chosen the operation  " + operation);
-    }
-}
-
-function Equal(){
-    A = parseFloat(AString);
-    B = parseFloat(BString);
-    solution = Calculate(A,B,operation);
-    Afficher(solution);
-}
-
-function Initialize(){
-    A = undefined;
-    B = undefined;
-    AString = undefined;
-    BString = undefined;
-    operation = undefined;
-    let display = document.getElementById("display");
-    
     display.value = "";
 }
