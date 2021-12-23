@@ -6,16 +6,15 @@ var bString;
 var operation;
 var total;
 
-function onClickNumber (number){
-    if ( a == undefined) {
+function onClickNumber(number) {
+    if (a == undefined) {
         if (aString == undefined) {
             aString = "";
         }
-       
-        aString += number 
-    }
-    else {
-        if(bString == undefined){
+
+        aString += number
+    } else {
+        if (bString == undefined) {
             bString = "";
         }
         bString += number;
@@ -24,61 +23,59 @@ function onClickNumber (number){
 
 }
 
-function display(number){
+function display(number) {
     var display = document.getElementById("display");
     display.value = ''
-  if( a != undefined && b != undefined && operation != undefined){
-      display.value = number
-  }
+    if (a != undefined && b != undefined && operation != undefined) {
+        display.value = number
+    } else {
+        if (aString != undefined) {
+            display.value += aString
+        }
+        if (operation != undefined) {
+            display.value += operation
+        }
+        if (bString != undefined) {
+            display.value += bString
+        }
 
-  else {
-    if ( aString != undefined){
-     display.value += aString
     }
-    if ( operation != undefined) {
-        display.value += operation
+}
+
+function onClickOperation(operationPara) {
+    if (operation == undefined) {
+        operation = operationPara;
+        a = parseFloat(aString);
     }
-  if( bString != undefined){
-      display.value += bString
-  }
-  
-}
+
+    display();
 }
 
-function onClickOperation (operationPara){
-       if(operation == undefined){
-           operation = operationPara;
-           a = parseFloat(aString);
-       }
-      
-       display();
-}
-
-function equal (){
+function equal() {
     a = parseFloat(aString);
     b = parseFloat(bString);
 
     total = calculate(a, b, operation)
-   
+
     display(total)
 }
 
-function calculate(aPara, bPara,operationPara){
-var _total = undefined
-switch(operationPara){
-    case"+":
-    _total = aPara + bPara
-         break;
-    case "-":
-    _total = aPara - bPara
-         break;
-    default:
-        break;
-}
- return _total;
+function calculate(aPara, bPara, operationPara) {
+    var _total = undefined
+    switch (operationPara) {
+        case "+":
+            _total = aPara + bPara
+            break;
+        case "-":
+            _total = aPara - bPara
+            break;
+        default:
+            break;
+    }
+    return _total;
 }
 
-function initialize (){
-   var display = document.getElementById("display");
-   display.value= "";
+function initialize() {
+    var display = document.getElementById("display");
+    display.value = "";
 }
