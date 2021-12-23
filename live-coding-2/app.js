@@ -14,14 +14,31 @@ function onClickNumber(number) {
      aString += number
     }
 
+
     dispaly();
 }
 
 function dispaly(number){
     var dispaly = document.getElementById("display");
     dispaly.value = '';
-    
-    if (aString != undefined) {
+    if (a!= undefined && b!= undefined && operation != undefined){
+  dispaly.value = number;
+    }
+    else 
+   if (aString != undefined) {
       dispaly.value += aString
     }
+   if (operation != undefined){
+       dispaly.value += operation
+   }
+
+}
+
+function onClickOperation (operationPara){
+    a = parseFloat(aString)
+   if (operation == undefined) {
+       operation = operationPara
+   }
+ dispaly();
+
 }
