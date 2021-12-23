@@ -30,7 +30,7 @@ function dispaly(number){
     if (a!= undefined && b!= undefined && operation != undefined){
   dispaly.value = number;
     }
-    else 
+    else {
    if (aString != undefined) {
       dispaly.value += aString
     }
@@ -41,7 +41,7 @@ function dispaly(number){
    dispaly.value += bString
    }
 
-
+}
 }
 
 function onClickOperation (operationPara){
@@ -60,3 +60,21 @@ function equal(){
    dispaly(total)
 }
 
+function calculate(aPara, bPara, operationPara) {
+    var _total = undefined
+
+    switch (operationPara) {
+        case "+":
+            _total = aPara + bPara
+            break;
+        case "-":
+            _total = aPara - bPara
+            break;
+        default:
+            break;
+    }
+
+    return _total;
+    }
+
+    
