@@ -1,3 +1,4 @@
+// declaring variabels
 var aString;
 var bString;
 var operation;
@@ -20,13 +21,6 @@ function onClickNumber(number) {
         }
         bString += number
     }
-
-
-    // if (aString == undefined) {
-    //     aString = number
-    // } else {
-    //     bString = number
-    // }
 
     display()
 }

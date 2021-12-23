@@ -7,7 +7,7 @@ let AString;
 let BString;
 
 
-// Job
+// travail
 function Calculate(A,B,operation){
     let solution = undefined;
     switch (operation) {
