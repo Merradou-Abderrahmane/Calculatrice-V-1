@@ -54,9 +54,25 @@ function onClickOperation (operationPara){
 }
 
 function equal (){
+    a = parseFloat(aString);
+    b = parseFloat(bString);
+
+    total = calculate(a, b, operation)
    
+    display(total)
 }
 
-function calculate(){
-
+function calculate(aPara, bPara,operationPara){
+var _total = undefined
+switch(operationPara){
+    case"+":
+    _total = aPara + bPara
+         break;
+    case "-":
+    _total = aPara - bPara
+         break;
+    default:
+        break;
+}
+ return _total;
 }
