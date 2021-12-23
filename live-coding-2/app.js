@@ -13,8 +13,14 @@ function onClickNumber(number) {
         }
      aString += number
     }
-
-
+   else {
+     if(b == undefined ) {
+        if (bString == undefined ){
+            bString = '';
+        }
+        bString += number 
+     }
+   }
     dispaly();
 }
 
@@ -31,6 +37,10 @@ function dispaly(number){
    if (operation != undefined){
        dispaly.value += operation
    }
+   if (bString!= undefined){
+   dispaly.value += bString
+   }
+
 
 }
 
@@ -42,3 +52,11 @@ function onClickOperation (operationPara){
  dispaly();
 
 }
+
+function equal(){
+    a = parseFloat(aString)
+    b = parseFloat(bString)
+   total = calculate (a, b, operation)
+   dispaly(total)
+}
+
