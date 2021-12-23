@@ -76,3 +76,7 @@ switch(operationPara){
 }
  return _total;
 }
+function initialize (){
+   var display = document.getElementById("display");
+   display.value= "";
+}
