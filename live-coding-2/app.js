@@ -77,4 +77,7 @@ function calculate(aPara, bPara, operationPara) {
     return _total;
     }
 
-    
+function initialize (){
+    dispaly = document.getElementById("display");
+    dispaly.value = "";
+}
