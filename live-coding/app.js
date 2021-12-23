@@ -36,9 +36,18 @@ function display(number){
     if ( aString != undefined){
      display.value = aString;
     }
+    if ( operation != undefined)
+    display.value = operation;
   }
+  
   
 
 }
 
-function onClickOperation
+function onClickOperation (operationPara){
+    a = parseInt(aString);
+       if(operation == undefined){
+           operation = operationPara;
+       }
+       display();
+}
