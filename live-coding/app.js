@@ -35,13 +35,14 @@ function display(number){
     if ( aString != undefined){
      display.value += aString
     }
-    if ( operation != undefined)
-    display.value += operation
-  }
+    if ( operation != undefined) {
+        display.value += operation
+    }
   if( bString != undefined){
       display.value += bString
   }
   
+}
 }
 
 function onClickOperation (operationPara){
@@ -76,6 +77,7 @@ switch(operationPara){
 }
  return _total;
 }
+
 function initialize (){
    var display = document.getElementById("display");
    display.value= "";
