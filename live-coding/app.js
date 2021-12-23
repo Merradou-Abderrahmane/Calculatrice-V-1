@@ -14,8 +14,7 @@ function onClickNumber (number){
        
         aString += number 
     }
-    
-    if ( b == undefined) {
+    else {
         if(bString == undefined){
             bString = "";
         }
@@ -27,9 +26,9 @@ function onClickNumber (number){
 
 function display(number){
     var display = document.getElementById("display");
-    display.value = "" ;
+    display.value = ''
   if( a != undefined && b != undefined && operation != undefined){
-      display.value = number;
+      display.value = number
   }
 
   else {
@@ -39,7 +38,9 @@ function display(number){
     if ( operation != undefined)
     display.value += operation
   }
- 
+  if( bString != undefined){
+      display.value += bString
+  }
   
 }
 
