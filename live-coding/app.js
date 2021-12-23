@@ -34,20 +34,28 @@ function display(number){
 
   else {
     if ( aString != undefined){
-     display.value = aString;
+     display.value += aString
     }
     if ( operation != undefined)
-    display.value = operation;
+    display.value += operation
   }
+ 
   
-  
-
 }
 
 function onClickOperation (operationPara){
-    a = parseInt(aString);
        if(operation == undefined){
            operation = operationPara;
+           a = parseFloat(aString);
        }
+      
        display();
+}
+
+function equal (){
+   
+}
+
+function calculate(){
+
 }
