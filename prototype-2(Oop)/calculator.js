@@ -60,7 +60,7 @@ function equal() {
 }
 
 
-function resetValues() {
+function initialize() {
     calculator.init()
     aString = undefined;
     bString = undefined;
