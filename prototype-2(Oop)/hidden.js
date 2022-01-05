@@ -12,7 +12,6 @@ class calculatorOop {
         this.#_a = value
     }
 
-
     get b(){
         return this.#_b
     }
@@ -36,7 +35,6 @@ class calculatorOop {
     set result(value){
         this.#_result = value
     }
-
 
     calculate(){
         this.#_result = undefined
