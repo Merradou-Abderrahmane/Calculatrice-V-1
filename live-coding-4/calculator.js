@@ -65,6 +65,6 @@ function initialize() {
     aString = undefined;
     bString = undefined;
     let display = document.getElementById("display");
-
+    
     display.value = "";
 }

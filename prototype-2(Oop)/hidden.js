@@ -46,10 +46,7 @@ class calculatorOop {
             case '-':
                 this.#_result = this.#_a - this.#_b;
                 break;
-            default:
-                break;
         }
-
         return this.#_result
     }
 
