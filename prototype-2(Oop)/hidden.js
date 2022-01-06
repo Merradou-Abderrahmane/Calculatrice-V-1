@@ -53,7 +53,6 @@ class calculatorOop {
         return this.#_result
     }
 
-
     init(){
         this.#_a = undefined;
         this.#_b = undefined;
