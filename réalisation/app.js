@@ -1,83 +1,89 @@
-// declaring variabels
-var a;
-var aString;
-var b;
-var bString;
-var operation;
-var total;
-
-function onClickNumber(number) {
-    if (a == undefined){
-        if (aString == undefined) {
-          aString = '';
-        }
-     aString += number
-    }
-   else {
-     if(b == undefined ) {
-        if (bString == undefined ){
-            bString = '';
-        }
-        bString += number 
-     }
-   }
-    dispaly();
-}
-
-function dispaly(number){
-    var dispaly = document.getElementById("display");
-    dispaly.value = '';
-    if (a!= undefined && b!= undefined && operation != undefined){
-  dispaly.value = number;
-    }
+/// declaration des variable
+var aString
+var bString
+var a
+var b
+var operation
+var resultat
+// click sur nombre
+function onclickSurnombre(number) {
+    if(a == undefined){
+        if(aString == undefined) aString = '';
+        aString += number;
+    } 
     else {
-   if (aString != undefined) {
-      dispaly.value += aString
+        if(bString == undefined) bString = '';
+        bString += number;
     }
-   if (operation != undefined){
-       dispaly.value += operation
-   }
-   if (bString!= undefined){
-   dispaly.value += bString
-   }
-
+    afficheur()
+    
 }
+// afficher
+function afficheur(number) {
+    var afficheur = document.getElementById("afficheur")
+     afficheur.value = '';
+    if (a != undefined && b != undefined && operation != undefined  ) {
+        afficheur.value = number
+        
+    }
+    else{
+        if (aString != undefined) {
+            afficheur.value += aString
+         }
+        if (operation != undefined) {
+            afficheur.value += operation
+         }
+        if (bString != undefined) {
+            afficheur.value += bString
+         }
+    }
+    
 }
-
-function onClickOperation (operationPara){
+// operation
+function operaTion(operationparam) {
     a = parseFloat(aString)
-   if (operation == undefined) {
-       operation = operationPara
-   }
- dispaly();
-
+    if (operation == undefined) {
+        operation = operationparam
+    }
+    afficheur()
 }
-
-function equal(){
+// egale
+function Egale() {
     a = parseFloat(aString)
-    b = parseFloat(bString)
-   total = calculate (a, b, operation)
-   dispaly(total)
+    b = parseFloat (bString)
+    resultat = calculer(a , b , operation)
+    afficheur(resultat)
 }
-
-function calculate(aPara, bPara, operationPara) {
-    var _total = undefined
-
-    switch (operationPara) {
-        case "+":
-            _total = aPara + bPara
+// calculer
+function calculer(a,b,operation) {
+    var _resultat = undefined
+    switch (operation) {
+        case '+':
+            _resultat = a + b
             break;
-        case "-":
-            _total = aPara - bPara
+        case '-':
+            _resultat = a - b
             break;
+        case '*':
+            _resultat = a * b
+            break;
+        case '/':
+            _resultat = a / b
+            break;
+    
         default:
             break;
     }
-
-    return _total;
-    }
-
-function initialize (){
-    dispaly = document.getElementById("display");
-    dispaly.value = "";
+    return _resultat
 }
+// suprimmer
+ function suprimer() {
+     a = undefined;
+     b = undefined;
+     aString = undefined;
+     bString = undefined;
+     operation = undefined;
+     resultat = undefined;
+     var afficheur = document.getElementById("afficheur");
+     afficheur.value = ''
+ }
