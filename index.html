@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="réalisation/style.css">
-    <title>Calculator V-1</title>
+    <title>calculatrice</title>
+    <link rel="stylesheet" href="réalisation-2/style.css">
 </head>
-<body>
-   <h1> Prototype Calculator V-1 </h1>
-   <input type="text" id="display">
-   <button onclick="onClickNumber(1)">1</button>
-   <button onclick="onClickNumber(2)">2</button>
-   <button onclick="onClickNumber(3)">3</button>
-   <button onclick="onClickOperation('+')">+</button>
-   <button onclick="onClickOperation('-')">-</button>
-   <button onclick="equal()">=</button>
-   <button onclick="initialize()">C</button>
-    <script src="réalisation/app.js"></script>
+<div class="container">
+    <form name="form">
+    <div class="display">
+      <input type="text" placeholder="0" name="displayResult" id="afficheur" />
+    </div>
+      <div class="buttons">
+        <div class="row">
+        <input type="button" name="b7" value="7" onClick="onclickSurnombre(7)">
+          <input type="button" name="b8" value="8" onClick="onclickSurnombre(8)">
+          <input type="button" name="b9" value="9" onClick="onclickSurnombre(9)">
+          <input type="button" name="addb" value="+" onClick="operaTion('+')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b4" value="4" onClick="onclickSurnombre(4)">
+          <input type="button" name="b5" value="5" onClick="onclickSurnombre(5)">
+          <input type="button" name="b6" value="6" onClick="onclickSurnombre(6)">
+          <input type="button" name="subb" value="-" onClick="operaTion('+')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b1" value="1" onClick="onclickSurnombre(1)">
+          <input type="button" name="b2" value="2" onClick="onclickSurnombre(2)">
+          <input type="button" name="b3" value="3" onClick="onclickSurnombre(3)">
+          <input type="button" name="mulb" value="*" onClick="operaTion('+')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b0" value="0" onClick="onclickSurnombre(0)">
+          <input type="button" name="divb" value="c" onClick="suprimer()">
+          <input type="button" class="red" value="=" onClick="Egale()">
+        </div>
+      </div>
+    
+    </form>
+  </div>
+  <script src="calcul(oop).js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
